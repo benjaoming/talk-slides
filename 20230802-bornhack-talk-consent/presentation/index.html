@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bornhack: An introduction to digital consent: Why a new definition with new tools and specifications are needed</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+/*
+Dingy Dungeon (#CF2B52)
+Royal Orange (#FD8C44)
+Crayola's Maize (#FEC04F)
+Light Sea Green (#2DA4A8)
+Lapis Lazuli (#296094)
+American Purple (#3F1F56).
+*/
+
+      body {
+        font-family: 'Droid Serif';
+        color: #333;
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold;
+        line-height: 1.1;
+      }
+      
+      a {
+        color: #333;
+        text-decoration: underline;
+      }
+
+      .left-column {
+        background: #3F1F56;
+        color: #fff;
+        width: 50%;
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .right-column {
+        width: 50%;
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 30px;
+        padding-left: 50px;
+        text-align: left;
+      }
+
+      .right-column2 {
+        width: 50%;
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 30px;
+        padding-left: 50px;
+        text-align: left;
+        background: #efefef;
+      }
+      
+      pre
+      {
+        text-align: left;
+        white-space: wrap;
+      }
+      
+      table {
+        border-collapse: collapse;
+        border: 0;
+        margin: 0 auto;
+      }
+      td, th
+      {
+        font-weight: normal;
+        padding: 10px;
+        margin: 0;
+        background: #eee;
+        border: 0;
+        text-align: left;
+      }
+      tr
+      {
+        margin: 2px;
+      }
+      
+      img
+      {
+        max-width: 80%;
+        max-height: 80%;
+        margin: auto auto;
+        display: block;
+        border: 4px dotted #CF2B52;
+        border-radius: 5px;
+        padding: 5px;
+      }
+      
+      .no-border-img img {
+        border: 0;
+        padding: 0;
+      }
+      
+      
+      .hide-counter .remark-slide-number,
+      {
+        display: none;
+      }
+      .slide-columns {padding: 0 height: 100%; display: table-row;}
+
+      .fancy-headline-slide .left-column {
+        width: 20%;
+        background: #296094;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+      }
+      .fancy-headline-slide .right-column {
+        width: 80%;
+      }
+      .fancy-headline-slide .right-column2 {
+        width: 80%;
+      }
+      .fancy-headline-slide1 .left-column {
+        background: #2DA4A8;
+      }
+      .fancy-headline-slide2 .left-column {
+        background: #FD8C44;
+      }
+      .fancy-headline-slide3 .left-column {
+        background: #3F1F56;
+      }
+
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-slide-content {height: 100%;}
+      .remark-slide {padding: 0}
+      
+      .talk-terms {
+        overflow: scroll;
+        max-height: 200px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+name: big-title
+count: false
+class: title-slide, slide-columns, hide-counter
+
+.left-column[
+
+# An introduction to digital consent
+
+## Why a new definition with new tools and specifications are needed
+
+August 2nd, Bornhack
+
+]
+
+.right-column[
+
+#### Benjamin Balder Bach
+
+Slides   | [https://github.com/benjaoming/talk-slides/](https://github.com/benjaoming/talk-slides/)
+---------|-------------------------------------------------------------
+Fediverse| [@benjaoming@social.data.coop](https://social.data.coop/@benjaoming)
+Homepage | [https://overtag.dk](https://overtag.dk)
+Associations | [data.coop](https://data.coop/), [Django Danmark](https://www.django-denmark.org/), [Fair Allocation of Infotech Resources (FAIR)](https://www.fairdanmark.dk/en/),
+
+]
+
+???
+
+A trip back to CCC talk 2019, how it felt to do a talk without knowing exactly why
+
+---
+
+name: big-title
+class: title-slide, slide-columns, hide-counter
+
+.left-column[
+
+# So why this talk about digital consent?
+
+]
+
+.right-column[
+
+* We care
+* We want to build something
+* We? Me and you perhaps?
+
+]
+
+???
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Agree?
+
+]
+
+.right-column[
+
+# Talk attendee consent
+
+<div class="talk-terms">
+5 paragraphs of Lorem Ipsum
+
+Quia nam accusantium quos ut. Unde et consequatur ex. Occaecati quos recusandae ab rerum quo culpa laudantium.
+
+Facere officia repellendus temporibus reprehenderit. Velit mollitia qui nisi mollitia. Amet est sapiente excepturi. Iusto hic quibusdam quisquam vitae cupiditate qui. Blanditiis aperiam ea expedita eaque dolore totam.
+
+Fugiat ut id sed consequatur a impedit consequatur quis. Ratione impedit molestiae aliquam qui id illo eius et. Consectetur at nulla rem totam placeat. Vitae sit iusto dolores omnis dolor sed.
+
+Dicta quasi nesciunt adipisci impedit numquam aliquam necessitatibus. Debitis et corporis modi repellendus beatae saepe aut. Dolore aliquam cumque animi ad nisi cupiditate odit exercitationem. Quia at et deserunt consequuntur reprehenderit velit consequuntur voluptatem. Architecto cupiditate animi natus velit sit a dolor in. Alias et nam blanditiis quam.
+
+Unde impedit ut dolores vero. Hic magni earum nostrum occaecati sint dolores autem. Id temporibus quidem dignissimos dolorum. Nihil recusandae accusamus aliquid.
+
+Aaaah you read this far! Good for you :)
+</div>
+
+## ✅️ Accept all
+
+## 🔲️ Reject all
+
+]
+
+
+???
+
+talk notes
+
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide1, slide-columns, hide-counter
+
+
+.left-column[
+
+# Talk outline
+
+]
+
+.right-column[
+
+<pre>
+1. Cookie banners: How consent is currently (mis)managed
+2. Understanding and defining consent (differently)
+3. Specifiations for digital consent
+4. An Open Source solution
+</pre>
+
+]
+
+
+???
+
+Talk outline
+
+---
+
+
+class: left, middle, section-title
+
+# Cookie banners 🤮️
+
+---
+
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Cookie banners
+
+]
+
+.right-column[
+
+# Example 1
+
+]
+
+
+???
+
+talk notes
+
+
+---
+
+name: big-title
+class: title-slide, slide-columns, hide-counter
+
+.left-column[
+
+# Fin
+
+]
+
+.right-column[
+
+* Let's make something happen: [https://github.com/django-denmark/django-consent](https://github.com/django-denmark/django-consent)
+
+* Go watch: **'I Agree' - the biggest lie on the internet? | All Hail The Algorithm** by Aljazeera
+https://www.youtube.com/watch?v=FrZQs25hA18
+
+]
+
+???
+
+Let's build something and if it doesn't work for tracking, that seems like a feature not a bug.
+
+    </textarea>
+    <script src="remark.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      // https://github.com/gnab/remark/wiki/Configuration
+      var slideshow = remark.create({
+        ratio: '16:9',
+        slideNumberFormat: 'Slide %current% of %total%'
+      });
+    </script>
+  </body>
+</html>
+
