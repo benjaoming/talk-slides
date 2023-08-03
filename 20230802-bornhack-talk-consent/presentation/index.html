@@ -370,12 +370,20 @@ American Purple (#3F1F56).
         color: #FFF;
         background: #444;
       }
+      th a {
+        font-weight: bold;
+        color: #FFF;
+      }
       
       blockquote {
         border-left: 4px solid #CCC;
         padding-left: 20px;
         font-size: 130%;
         line-height: 130%;
+      }
+      
+      .center-contents h1 {
+        text-align: center
       }
 
       
@@ -420,6 +428,16 @@ Approaching this as a software developer
 
 Terminology can be inaccurate
 
+
+---
+
+
+class: left, middle, section-title, center-contents
+
+# 2023.djangoday.dk
+
+<img src="djangoday.svg" style="border: 0;">
+
 ---
 
 name: big-title
@@ -441,9 +459,13 @@ class: title-slide, slide-columns, hide-counter
 
 ???
 
-More people can think about the issue and be prepared to do something
+More people can think about the issue and be prepared to do something.
 
 Building something already!
+
+Use new tools once built!
+
+Having the talk in itself is helpful.
 
 ---
 
@@ -742,7 +764,8 @@ class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
 
 # If this was a workshop, we could rehearse cases after the talk:
 
-* Can this be properly revoked?
+* Is this informed consent?
+* How should consent withdrawal work?
 * Is it legitimate interest?
 
 ]
@@ -944,6 +967,36 @@ class: left, middle, section-title
 
 notes
 
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Specifiations for digital consent
+
+]
+
+.right-column[
+
+# Requirements: High-level
+
+## Privacy by design
+
+* Consent is always informed
+* Data models reflect full life-cycle
+
+## Privacy by default
+
+* Consent is NEVER implicit and NEVER relies on a user mistake/inaction
+* Big advantage: When consent itself is PII (Personal Identifiable Information), then always assuming "no consent" no longer requires to store PII for a rejection.
+
+]
+
+???
+
+Privacy by design affects many many aspects.
 
 ---
 
@@ -1047,7 +1100,55 @@ class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
 
 # UX Requirements
 
-...
+Be clear about:
+
+* What data you need
+* Why you need it
+* The benefit to the user
+* How the data will be used
+* What duration
+
+
+]
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Specifiations for digital consent
+
+]
+
+.right-column[
+
+# UX Requirements
+
+*If users reject the consent request, consider reiterating how this will affect the user journey and ask them to confirm the choice.*
+
+
+]
+
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Specifiations for digital consent
+
+]
+
+.right-column[
+
+# UX Requirements
+
+*Give details for how to manage data if the user changes their mind.*
+
 
 ]
 
@@ -1092,13 +1193,56 @@ class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
 
 ---
 
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Specifiations for digital consent
+
+]
+
+.right-column[
+
+# OpenAPI
+
+GovStack Consent Building Block: [https://github.com/GovStackWorkingGroup/bb-consent/](https://github.com/GovStackWorkingGroup/bb-consent/)
+
+]
+
+---
+
 class: left, middle, section-title
 
 # An Open Source solution
 
 ???
 
-notes
+To get out the mess of cookie banners, I think we know enough to build a reusable and pluggable consent application for popular web frameworks.
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# django-consent
+
+]
+
+.right-column[
+
+# Let's build with Django!
+
+* Data models
+* Perhaps have a `ConsentField`
+* Signals / pub-sub
+
+[https://github.com/django-denmark/django-consent](https://github.com/django-denmark/django-consent)
+
+]
+
 
 ---
 
