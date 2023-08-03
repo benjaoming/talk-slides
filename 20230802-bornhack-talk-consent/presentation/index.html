@@ -3,10 +3,213 @@
   <head>
     <title>Bornhack: An introduction to digital consent: Why a new definition with new tools and specifications are needed</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+
+<!-- fonts TODO -->
     <style type="text/css">
-      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      /* cyrillic */
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/yanonekaffeesatz/v24/3y9I6aknfjLm_3lMKjiMgmUUYBs04aUXNxt9gW2LIfto9tWZc2GKOnU.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/yanonekaffeesatz/v24/3y9I6aknfjLm_3lMKjiMgmUUYBs04aUXNxt9gW2LIfto9tWZeGGKOnU.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/yanonekaffeesatz/v24/3y9I6aknfjLm_3lMKjiMgmUUYBs04aUXNxt9gW2LIfto9tWZeWGKOnU.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/yanonekaffeesatz/v24/3y9I6aknfjLm_3lMKjiMgmUUYBs04aUXNxt9gW2LIfto9tWZd2GK.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* latin */
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/droidserif/v19/tDbK2oqRg1oM3QBjjcaDkOr4nAfcHg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/droidserif/v19/tDbI2oqRg1oM3QBjjcaDkOr9rAU.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/droidserif/v19/tDbV2oqRg1oM3QBjjcaDkOJGiRD7OwE.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v15/KFOhCneDtsqEr0keqCMhbCc_OsvSkLBP.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v15/KFOhCneDtsqEr0keqCMhbCc_OsLSkLBP.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v15/KFOhCneDtsqEr0keqCMhbCc_OsrSkLBP.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v15/KFOhCneDtsqEr0keqCMhbCc_OsXSkLBP.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v15/KFOhCneDtsqEr0keqCMhbCc_OsjSkLBP.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v15/KFOhCneDtsqEr0keqCMhbCc_OsbSkA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v15/KFOjCneDtsqEr0keqCMhbCc3CsTKlA.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v15/KFOjCneDtsqEr0keqCMhbCc-CsTKlA.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v15/KFOjCneDtsqEr0keqCMhbCc2CsTKlA.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v15/KFOjCneDtsqEr0keqCMhbCc5CsTKlA.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v15/KFOjCneDtsqEr0keqCMhbCc0CsTKlA.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v15/KFOjCneDtsqEr0keqCMhbCc6CsQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v15/KFO-CneDtsqEr0keqCMhbC-BL9H4tY12eg.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v15/KFO-CneDtsqEr0keqCMhbC-BL9HxtY12eg.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v15/KFO-CneDtsqEr0keqCMhbC-BL9H5tY12eg.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v15/KFO-CneDtsqEr0keqCMhbC-BL9H2tY12eg.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v15/KFO-CneDtsqEr0keqCMhbC-BL9H7tY12eg.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/ubuntumono/v15/KFO-CneDtsqEr0keqCMhbC-BL9H1tY0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 /*
 Dingy Dungeon (#CF2B52)
@@ -134,6 +337,15 @@ American Purple (#3F1F56).
         background: #3F1F56;
       }
 
+
+      .picture-slide .right-column {
+        padding: 0;
+        width: 100%;
+      }
+      .picture-slide .right-column img {
+        max-width: 100%;
+      }
+      
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
       .remark-slide-content {height: 100%;}
       .remark-slide {padding: 0}
@@ -142,6 +354,30 @@ American Purple (#3F1F56).
         overflow: scroll;
         max-height: 200px;
       }
+      
+      table {
+        border: 2px solid #999;
+        border-radius: 5px;
+        border-collapse: collapse;
+      }
+
+      td, th {
+        border: 2px solid #999;
+      }
+      
+      th {
+        font-weight: bold;
+        color: #FFF;
+        background: #444;
+      }
+      
+      blockquote {
+        border-left: 4px solid #CCC;
+        padding-left: 20px;
+        font-size: 130%;
+        line-height: 130%;
+      }
+
       
     </style>
   </head>
@@ -176,7 +412,13 @@ Associations | [data.coop](https://data.coop/), [Django Danmark](https://www.dja
 
 ???
 
+I'm a software developer
+
 A trip back to CCC talk 2019, how it felt to do a talk without knowing exactly why
+
+Approaching this as a software developer
+
+Terminology can be inaccurate
 
 ---
 
@@ -198,6 +440,10 @@ class: title-slide, slide-columns, hide-counter
 ]
 
 ???
+
+More people can think about the issue and be prepared to do something
+
+Building something already!
 
 ---
 
@@ -274,10 +520,60 @@ Talk outline
 
 class: left, middle, section-title
 
-# Cookie banners 🤮️
+# Cookie banners: How consent is currently (mis)managed
 
 ---
 
+
+class: left, middle, section-title
+
+# Some examples 🙃️
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, picture-slide, hide-counter
+
+
+.left-column[
+
+# Cookie banners
+
+]
+
+.right-column[
+
+<img src="wordpress.png" style="border: 0">
+
+]
+
+
+???
+
+no consent dialog on front page
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, picture-slide, hide-counter
+
+
+.left-column[
+
+# Cookie banners
+
+]
+
+.right-column[
+
+<img src="bloomberg.png" style="border: 0">
+
+]
+
+
+???
+
+Ads and content can be personalised based on a profile. More data can be added to better personalise ads and content. Ad and content performance can be measured. Insights about audiences who saw the ads and content can be derived. Data can be used to build or improve user experience, systems and software.
+
+---
 
 class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
 
@@ -290,7 +586,13 @@ class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
 
 .right-column[
 
-# Example 1
+# Absurdities of revoking a cookie consent:
+
+* Need to store all your cookies indefinitely
+* Need to have knowledge of their actions that were captured
+* Need to have knowledge of how finger-printing works and how they got finger-printed
+* Need to know who to contact and how
+* Finally: Is anyone even able to withdraw that data processing effectively?
 
 ]
 
@@ -299,6 +601,504 @@ class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
 
 talk notes
 
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Cookie banners
+
+]
+
+.right-column[
+
+# Other absurdities:
+
+* DNT HTTP headers!
+* Browser extensions and ad blockers!
+* "Continue browsing this site" - But I'm already on it!!
+
+]
+
+
+???
+
+talk notes
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Cookie banners
+
+]
+
+.right-column[
+
+# Advantages?
+
+An optimistic take: It has made the amounts and depths of tracking and privacy invasions much more clear and perhaps scary to users.
+
+]
+
+
+???
+
+talk notes
+
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Cookie banners
+
+]
+
+.right-column[
+
+# Disadvantages
+
+* Consent fatigue
+* Normalizing tracking and privacy invasions
+* Normalizing "not having rights", "everything is broken", post-modern, nihilistic view on a modern era where big tech can just have their way.
+
+
+]
+
+
+???
+
+talk notes
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Cookie banners
+
+]
+
+.right-column[
+
+# Cookie consent is not really consent
+
+* It's not "informed" and no one cares enough (risk vs. keeping informed ratio)
+* DNT HTTP headers - eh what
+* No way to revoke
+
+]
+
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Cookie banners
+
+]
+
+.right-column[
+
+# Popular vote
+
+<img src="vote.png">
+
+
+]
+
+
+???
+
+talk notes
+
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Cookie banners
+
+]
+
+.right-column[
+
+# If this was a workshop, we could rehearse cases after the talk:
+
+* Can this be properly revoked?
+* Is it legitimate interest?
+
+]
+
+
+???
+
+Especially CDNs
+
+---
+
+
+class: left, middle, section-title
+
+# Understanding and defining consent (differently)
+
+???
+
+notes
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Consent definition
+
+]
+
+.right-column[
+
+# Properties of real* consent
+
+1. Voluntary
+2. Informed consent
+3. Can be revoked
+4. Manged by the user
+5. Auditable
+6. Individual rights from GDPR
+
+*) strong, true, actual
+
+]
+
+???
+
+If there's time, we'll get back to some difficult properties in Specification
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Consent definition
+
+]
+
+.right-column[
+
+# "consent" vs. "contract/agreement"
+
+<table>
+
+<tr>
+<th>Consent</th>
+<th>Contracts and agreements</th>
+</tr>
+
+<tr>
+<td>Voluntary</td>
+<td>Conditional</td>
+</tr>
+
+<tr>
+<td>Has purpose and intention</td>
+<td>Requirements, obligations etc.</td>
+</tr>
+
+<tr>
+<td>Can be revoked</td>
+<td>Penalties, consequences etc.</td>
+</tr>
+
+<tr>
+<td>Auditable</td>
+<td>?</td>
+</tr>
+
+</table>
+
+]
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Consent definition
+
+]
+
+.right-column[
+
+# Examples of consent
+
+* Administration of data that's NOT legitimate interest: Age, gender, interests etc.
+* Research and derived results: Data processing, analysis, sharing with other parties
+* Obtaining data from other sources
+* Communication
+
+]
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Consent definition
+
+]
+
+.right-column[
+
+# Questions to ask
+
+* **WHAT RISKS ARE IMPLIED TO THE USER?**
+* How does this translate into a real consent agreement?
+* Is data processing in the user's interest?
+
+
+]
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Consent definition
+
+]
+
+.right-column[
+
+# Definition proposal
+
+<blockquote>
+Consent is understood as a voluntary, well-informed and revokable declaration by an individual for another party to use and process their data in a specific way.
+</blockquote>
+
+Current GovStack version: <em>In the GovStack context, consent is understood as a voluntary declaration by an individual to approve the processing of their Personal data.</em>
+
+[https://govstack.gitbook.io/bb-consent/](https://govstack.gitbook.io/bb-consent/)
+
+]
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Consent definition
+
+]
+
+.right-column[
+
+# What consent is not
+
+The use of consent should be avoided in cases as below, which are not part of this specification:
+
+* When a person is simply informed of the processing of the data by the organisation as part of the service provided under contract or by an authority.
+
+* When consent does not have to be obtained in a situation where the entity does not identify or cannot identify people with reasonable effort.
+
+[https://govstack.gitbook.io/bb-consent/](https://govstack.gitbook.io/bb-consent/)
+
+]
+
+
+
+---
+
+class: left, middle, section-title
+
+# Specifiations for digital consent
+
+???
+
+notes
+
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Specifiations for digital consent
+
+]
+
+.right-column[
+
+<pre>
+Elements of GovStack Consent Building Block:
+
+1. Use cases (we'll skip this)
+2. Functional requirements
+3. UX requirements
+4. Data models
+5. OpenAPI
+</pre>
+
+]
+
+???
+
+There are other various requirements, too. Security for instance.
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Specifiations for digital consent
+
+]
+
+.right-column[
+
+# Functional requirements
+
+## Administrator User Functionalities
+
+]
+
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Specifiations for digital consent
+
+]
+
+.right-column[
+
+# Functional requirements
+
+## Individual User Functionalities
+
+]
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Specifiations for digital consent
+
+]
+
+.right-column[
+
+# Functional requirements
+
+## Data Processing Auditor User Functionalities
+
+]
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Specifiations for digital consent
+
+]
+
+.right-column[
+
+# UX Requirements
+
+...
+
+]
+
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Specifiations for digital consent
+
+]
+
+.right-column[
+
+# Data models: Simple
+
+<img src="simple-resource-model.png" style="border: 0">
+
+]
+
+---
+
+class: fancy-headline-slide, fancy-headline-slide2, slide-columns, hide-counter
+
+
+.left-column[
+
+# Specifiations for digital consent
+
+]
+
+.right-column[
+
+# Data models: Elaborate
+
+<img src="elaborate-resource-model.png" style="border: 0">
+
+]
+
+---
+
+class: left, middle, section-title
+
+# An Open Source solution
+
+???
+
+notes
 
 ---
 
@@ -313,6 +1113,8 @@ class: title-slide, slide-columns, hide-counter
 
 .right-column[
 
+* See you after the talk 👋️
+
 * Let's make something happen: [https://github.com/django-denmark/django-consent](https://github.com/django-denmark/django-consent)
 
 * Go watch: **'I Agree' - the biggest lie on the internet? | All Hail The Algorithm** by Aljazeera
@@ -321,6 +1123,10 @@ https://www.youtube.com/watch?v=FrZQs25hA18
 ]
 
 ???
+
+I'd love to accumulate ideas and experiences
+
+Help me develop cases
 
 Let's build something and if it doesn't work for tracking, that seems like a feature not a bug.
 
